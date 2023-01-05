@@ -12,10 +12,15 @@ function setup() {
     background(40);
     fillAllInstances(230, windowWidth / 12 + extraMargin());
 }
+
+
 function draw() {
+
     allInstances.forEach(element => {
+        element.setRotate();
         element.draw()        
     });
+    
 
     angle += angleV
     angleV += angleA
